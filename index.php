@@ -46,12 +46,6 @@
     $Cartucce_filtranti =new Prodotto ("Cartucce Filtranti per Filtro EasyCrystal", 5.50, "https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg", "cartucce", "pesci");
     $Kong_classic =new MaterialeColore ("Kong Classic", 8.99, "https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg", "gioco", "cani", "plastica", "rosso");
     $Topini_di_peluche =new MaterialeColore ("Topini di peluche Trixie", 5.00, "https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg", "gioco", "gatti", "morbido peluche", "griggio");
-
-   
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -59,10 +53,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title>OOP Shop</title>
 </head>
 <body>
-    <h2><?php echo $Royal_canin->titolo ?></h2>
+    <div id="app">
+        <h2><?php echo $Royal_canin->titolo ?></h2>
+        <h2>{{titolo}}</h2>
+    </div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./js/script.js"></script>
 </body>
 </html>
