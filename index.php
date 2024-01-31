@@ -11,6 +11,21 @@
             $this->foto = $foto;
         }
     }
+
+    class dettagliProdotto extends prodotto{
+        public $tipo;
+        public $animale;
+
+        function __construct($titolo, $costo , $foto, $tipo, $animale ){
+            $this->titolo = $titolo;
+            $this->costo = $costo;
+            $this->foto = $foto;
+            $this->tipo = $tipo;
+            $this->animale = $animale;
+
+
+        }
+    }
 ?>
 
 <!DOCTYPE html>
