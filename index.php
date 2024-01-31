@@ -46,6 +46,17 @@
     $Cartucce_filtranti =new Prodotto ("Cartucce Filtranti per Filtro EasyCrystal", 5.50, "https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg", "cartucce", "pesci");
     $Kong_classic =new MaterialeColore ("Kong Classic", 8.99, "https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg", "gioco", "cani", "plastica", "rosso");
     $Topini_di_peluche =new MaterialeColore ("Topini di peluche Trixie", 5.00, "https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg", "gioco", "gatti", "morbido peluche", "griggio");
+
+    $prodotti = [
+        $Royal_canin,
+        $Almo_nature_holistic,
+        $Almo_nature_cat,
+        $Mangime_per_pesci,
+        $Voliera_wilma,
+        $Cartucce_filtranti,
+        $Kong_classic,
+        $Topini_di_peluche
+    ];
 ?>
 
 <!DOCTYPE html>
@@ -64,34 +75,28 @@
                 <div class="col-12 text-center">
                     <h1>OOP Shop</h1>
                 </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="<?php echo $Royal_canin->foto ?>" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title text-center"><?php echo $Royal_canin->titolo ?></h5>
+
+                <div class="d-flex flex-wrap justify-content-center">
+                    <?php  foreach ($prodotti as $prodotto) {?>
+                    <div class="col-auto m-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="<?php echo $prodotto->foto ?>" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title text-center"><?php echo $prodotto->titolo ?></h5>
+                                <h6 class="text-center">(<?php echo $prodotto->tipo?>)</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Adatto a: <?php echo $prodotto->animale?></li>
+                                <li class="list-group-item">Il prezzo è di <?php echo $prodotto->costo?>€</li>
+                                <!-- <li class="list-group-item"><?php echo $prodotto->consistenza?></li> -->
+
+                              
+                            </ul>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
-                        </ul>
                     </div>
+                    <?php } ?>
                 </div>
 
-
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="<?php echo $Royal_canin->foto ?>" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $Royal_canin->titolo ?></h5>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
        
