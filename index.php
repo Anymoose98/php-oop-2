@@ -7,7 +7,7 @@
         public $tipo;
         public $animale;
 
-        function __construct($titolo, $costo , $foto){
+        function __construct($titolo, $costo , $foto, $tipo, $animale){
             $this->titolo = $titolo;
             $this->costo = $costo;
             $this->foto = $foto;
@@ -17,10 +17,11 @@
     }
 
     // Consistenza del mangiare
-    class Consistenza extends Prodotto{
+    class Cibo extends Prodotto{
         public $consistenza;
 
         function __construct($titolo, $costo , $foto, $tipo, $animale, $consistenza){
+            parent::__construct($titolo, $costo, $foto, $tipo, $animale);
             $this->consistenza = $consistenza;
         }
     }
@@ -31,10 +32,24 @@
         public $colore;
 
         function __construct($titolo, $costo , $foto, $tipo, $animale, $materiale, $colore){
+            parent::__construct($titolo, $costo, $foto, $tipo, $animale);
             $this->materiale = $materiale;
             $this->colore = $colore;
         }
     }
+
+    $Royal_canin =new Cibo ("Royal Canin Mini Adult", 40.99 , "https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000", "alimentare","cani","croccantini secchi" );
+    $Almo_nature_holistic =new Cibo ("Almo Nature Holistic Maintenance Medium Large Tonno e Riso", 38.99 , "https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpg", "alimentare","cani","croccantini secchi" );
+    $Almo_nature_cat =new Cibo ("Almo Nature Cat Daily Lattina", 1.27 , "https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg", "alimentare","gatti","croccantini secchi" );
+    $Mangime_per_pesci =new Cibo ("Mangime per Pesci Guppy in Fiocchi", 3.41 , "https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg", "alimentare","pesci","fiocchi" );
+    $Voliera_wilma =new MaterialeColore ("Voliera Wilma in Legno", 346.00, "https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg", "gabbia", "uccelli", "legno", "marrone chiaro");
+    $Cartucce_filtranti =new Prodotto ("Cartucce Filtranti per Filtro EasyCrystal", 5.50, "https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg", "cartucce", "pesci");
+    $Kong_classic =new MaterialeColore ("Kong Classic", 8.99, "https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg", "gioco", "cani", "plastica", "rosso");
+    $Topini_di_peluche =new MaterialeColore ("Topini di peluche Trixie", 5.00, "https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg", "gioco", "gatti", "morbido peluche", "griggio");
+
+   
+
+
 
 
 ?>
@@ -48,6 +63,6 @@
     <title>OOP Shop</title>
 </head>
 <body>
-    <h1>Prova</h1>
+    <h2><?php echo $Royal_canin->titolo ?></h2>
 </body>
 </html>
