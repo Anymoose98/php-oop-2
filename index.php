@@ -1,3 +1,18 @@
+<?php 
+    // Definisco la classe prodotti
+    class prodotto{
+        public $titolo;
+        public $costo;
+        public $foto;
+
+        function __construct($titolo, $costo , $foto){
+            $this->titolo = $titolo;
+            $this->costo = $costo;
+            $this->foto = $foto;
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
