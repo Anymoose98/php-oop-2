@@ -59,8 +59,42 @@
 </head>
 <body>
     <div id="app">
-        <h2><?php echo $Royal_canin->titolo ?></h2>
-        <h2>{{titolo}}</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>OOP Shop</h1>
+                </div>
+                <div class="col-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="<?php echo $Royal_canin->foto ?>" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-center"><?php echo $Royal_canin->titolo ?></h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="<?php echo $Royal_canin->foto ?>" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $Royal_canin->titolo ?></h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
     </div>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="./js/script.js"></script>
